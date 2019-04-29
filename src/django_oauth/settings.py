@@ -54,6 +54,17 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        'read': 'Read scope',
+        'write': 'Write scope',
+        'introspection': 'Introspect token scope',
+    },
+    'AUTHORIZATION_CODE_EXPIRE_SECONDS': 600,
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,
+    'REQUEST_APPROVAL_PROMPT': 'auto',
+}
+
 ROOT_URLCONF = 'django_oauth.urls'
 
 TEMPLATES = [
