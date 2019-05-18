@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
+from oauth2_provider.models import Application
 import requests
 
 def create_account(request):
@@ -16,6 +18,7 @@ def create_account(request):
         }
         requests.post(url='http://cdrive/register-user/', data=data)
         #requests.post(url='http://0.0.0.0:8001/register-user/', data=data)
-        return redirect('/accounts/login/')
+        cdrive_url = Application.objects.filter(name='CDrive')[0].redirect_uris
+        return redirect(cdrive_url)
     elif request.method == 'GET':
         return render(request, 'registration/create-user.html')

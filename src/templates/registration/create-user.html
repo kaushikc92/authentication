@@ -21,7 +21,7 @@ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07j
 
     <form class="form-signin" action="{% url 'create_account' %}" method="post">
         {% csrf_token %}
-        <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
+        <h1 class="h4 mb-3 font-weight-normal">Create Columbus Account</h1>
         <label for="id_username" class="sr-only">Username</label>
         <input type="text" id="id_username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
         <label for="id_firstname" class="sr-only">First Name</label>

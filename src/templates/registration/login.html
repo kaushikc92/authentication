@@ -22,13 +22,16 @@ integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0
 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <form class="form-signin" method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        <h1 class="h3 mb-3 font-weight-normal">Sign in to Columbus</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Welcome to Columbus!</h1>
         <label for="id_username" class="sr-only">Username</label>
         <input type="text" id="id_username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
         <label for="id_password" class="sr-only">Password</label>
         <input type="password" id="id_password" name="password" class="form-control" placeholder="Password" required="">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         <input type="hidden" name="next" value="{{ next }}" />
+        <div class="create-link">
+            Don't have a Columbus account? <a href="{% url 'create_account' %}">Sign Up</a>
+        </div>
     </form>
 
 </body>
