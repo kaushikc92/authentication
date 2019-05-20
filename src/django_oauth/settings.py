@@ -25,6 +25,8 @@ SECRET_KEY = 'xm(q_&2q7m-$3m=of)^40nis1vo2w-^896^04^k-isx7o@-_o@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DEBUG_LOCAL = True
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -134,3 +136,5 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+LOGOUT_REDIRECT_URL = 'http://0.0.0.0:3000/home/'
