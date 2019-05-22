@@ -135,6 +135,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
+STATIC_URL = '/authentication/static/'
 
-LOGOUT_REDIRECT_URL = 'http://0.0.0.0:3000/home/'
+LOGIN_URL = '/authentication/accounts/login/'
+
+LOGOUT_REDIRECT_URL = '/cdrive/home/'
