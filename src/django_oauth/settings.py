@@ -25,7 +25,7 @@ SECRET_KEY = 'xm(q_&2q7m-$3m=of)^40nis1vo2w-^896^04^k-isx7o@-_o@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-DEBUG_LOCAL = True
+DEBUG_LOCAL = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -97,8 +97,11 @@ WSGI_APPLICATION = 'django_oauth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'postgres',
+        'PORT': 5432,
     }
 }
 
