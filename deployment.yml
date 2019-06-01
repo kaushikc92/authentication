@@ -18,3 +18,10 @@ spec:
           ports:
             - name: http
               containerPort: 8000
+          volumeMounts:
+            - mountPath: /code/data
+              name: authentication-data
+      volumes:
+        - name: authentication-data
+          persistentVolumeClaim:
+            claimName: authentication-pv-claim

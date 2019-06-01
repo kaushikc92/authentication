@@ -97,12 +97,8 @@ WSGI_APPLICATION = 'django_oauth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'authenticationdb',
-        'USER': 'admin',
-        'PASSWORD': 'authenticationadmin',
-        'HOST': 'authentication-db',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(os.path.join(BASE_DIR, 'data'), 'db.sqlite3'),
     }
 }
 
