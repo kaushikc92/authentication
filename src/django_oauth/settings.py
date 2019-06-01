@@ -98,9 +98,10 @@ WSGI_APPLICATION = 'django_oauth.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'postgres',
+        'NAME': 'authenticationdb',
+        'USER': 'admin',
+        'PASSWORD': 'authenticationadmin',
+        'HOST': 'authentication-db',
         'PORT': 5432,
     }
 }
