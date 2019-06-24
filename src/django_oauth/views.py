@@ -19,9 +19,9 @@ def create_account(request):
         }
         
         if settings.DEBUG_LOCAL:
-            requests.post(url='http://0.0.0.0:8001/api/v1/cdrive/register-user/', data=data)
+            requests.post(url='http://0.0.0.0:8001/register-user/', data=data)
         else:
-            requests.post(url='http://cdrive/api/v1/cdrive/register-user/', data=data)
+            requests.post(url='http://cdrive/register-user/', data=data)
 
         cdrive_url = Application.objects.filter(name='CDrive')[0].redirect_uris
         return redirect(cdrive_url)

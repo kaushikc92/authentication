@@ -135,8 +135,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/authentication/static/'
+STATIC_URL = '/static/'
 
-LOGIN_URL = '/authentication/accounts/login/'
+LOGIN_URL = '/accounts/login/'
 
-LOGOUT_REDIRECT_URL = '/cdrive/home/'
+LOGOUT_REDIRECT_URL = 'https://cdrive.columbusecosystem.com/'

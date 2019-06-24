@@ -19,8 +19,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('authentication/admin/', admin.site.urls),
-    path('authentication/o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('authentication/accounts/create/', views.create_account, name='create_account'),
-    path('authentication/accounts/', include('django.contrib.auth.urls')),
+    path('admin/', admin.site.urls),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('accounts/create/', views.create_account, name='create_account'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
